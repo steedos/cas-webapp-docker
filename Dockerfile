@@ -43,16 +43,15 @@ RUN cd / \
 #     && rm server-jre-$java_version-linux-x64.tar.gz \
 #     && ln -s /opt/jdk$java_semver/ /opt/jre-home;
 
+
+
+
 # Download the CAS overlay project \
 RUN cd / \
-    && git clone --depth 1 --single-branch https://github.com/apereo/cas-overlay-template.git cas-overlay \
-    && mkdir -p /etc/cas \
+    && git clone --depth 1 --single-branch https://github.com/steedos/cas-overlay-template.git cas-overlay \
     && mkdir -p cas-overlay/bin;
 
-COPY thekeystore /etc/cas/
 COPY bin/*.* cas-overlay/bin/
-COPY etc/cas/config/*.* /cas-overlay/etc/cas/config/
-COPY etc/cas/services/*.* /cas-overlay/etc/cas/services/
 
 RUN chmod -R 750 cas-overlay/bin \
     && chmod 750 cas-overlay/mvnw \
