@@ -12,7 +12,8 @@ fi
 
 if [ ! -z "$cas_version" ]
   then
-	docker run -d --name cas -p 8086:8086 -p 8446:8446 -v /srv/cas/cas-overlay/etc/cas:/cas-overlay/etc/cas steedos/cas steedos/cas:v$cas_version
+  	docker tag steedos/cas:v$cas_version steedos/cas
+	docker run -d --name cas -p 8086:8086 -p 8446:8446 -v /srv/cas/cas-overlay/etc/cas:/cas-overlay/etc/cas steedos/cas /bin/sh /cas-overlay/bin/run-cas.sh
 	docker logs -f cas
   else
   	echo "No image tag is provided."	
