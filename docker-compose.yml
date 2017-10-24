@@ -1,5 +1,5 @@
 cas:
-  image: steedos/cas:5.1.x
+  image: steedos/cas:5.1.0
   ports:
     - 8446:8446
     - 8086:8086
@@ -10,4 +10,3 @@ cas:
 
 
 
-    
