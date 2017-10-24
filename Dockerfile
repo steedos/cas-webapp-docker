@@ -61,7 +61,7 @@ RUN chmod -R 750 cas-overlay/bin \
 # Enable if you are using Oracle Java
 #	&& chmod 750 /opt/jre-home/jre/bin/java;
 
-EXPOSE 8080 8443
+EXPOSE 8086 8446
 
 WORKDIR /cas-overlay
 
