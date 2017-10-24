@@ -17,7 +17,7 @@ A docker image for CAS server. Images are tagged to match CAS server releases.
 
 ### Image
 
-* The image will be available on the host via ports `8080` and `8443`
+* The image will be available on the host via ports `8086` and `8446`
 * You must check the `Dockerfile` to ensure the right branch from the [CAS overlay project](https://github.com/apereo/cas-overlay-template) is pulled/cloned.
 * Check the [CAS overlay project](https://github.com/apereo/cas-overlay-template) itself to figure out the targetted CAS release.
 
