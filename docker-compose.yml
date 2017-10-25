@@ -1,12 +1,8 @@
 cas:
-  image: steedos/cas:5.1.0
+  image: steedos/cas:v5.1.0
   ports:
     - 8446:8446
     - 8086:8086
   volumes:
     - /srv/cas/cas-overlay/etc/cas:/cas-overlay/etc/cas
-
-
-
-
 
