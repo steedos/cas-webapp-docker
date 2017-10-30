@@ -5,4 +5,4 @@ cas:
     - 8086:8086
   volumes:
     - /srv/cas/cas-overlay/etc/cas:/cas-overlay/etc/cas
-
+    - /srv/cas/cas-overlay/src/main:/cas-overlay/src/main
